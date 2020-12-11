@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>User Authenctication</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <div class="login-box">
+        <div class="log">
+          <img src="img/login.jpg"/>
+        </div>
+        <div class="login">
+          <h1>Login</h1>
+            <form action="chat.html">
+              <input type="text" placeholder="user name" /><br><br>
+              <input type="password" placeholder="password" /><br><br>
+              <input type="submit" name="log" class="btn" value="LogIn" />
+            </form>
+        </div>
+        <div class="sign">
+          <h1>Registration</h1>
+            <form>
+              <input type="text" placeholder="user name" /><br><br>
+              <input type="mail" placeholder="name@domain.name" /><br><br>
+              <input type="password" placeholder="password" /><br><br>
+              <input type="password" placeholder="confirm password" /><br><br>
+              <input type="submit" name="reg" class="btn" value="Register" />
+            </form>
+        </div>
+        <a href="#" class="footer accr">create new <i class="fas fa-arrow-alt-circle-right"></i></a>
+        <a href="#" class="footer acc">Already had one <i class="fas fa-arrow-alt-circle-right"></i></a>
+      </div>
+    </center>
+    <script type="text/javascript">
+      $(".sign,.acc").hide();
+      $(".accr").click(function(){
+        $(".login,.accr").hide();
+        $(".sign,.acc").show();
+        $('.log').html('<img src="img/reg.jpg" />');
+      });
+      $(".acc").click(function(){
+        $(".sign,.acc").hide();
+        $(".login,.accr").show();
+        $('.log').html('<img src="img/login.jpg" />');
+      });
+    </script>
+  </body>
+</html>
